@@ -5,5 +5,5 @@ import "controllers"
 import "trix"
 import "@rails/actiontext"
 
-import localTime from "local-time"
+import LocalTime from "local-time"
 LocalTime.start()
