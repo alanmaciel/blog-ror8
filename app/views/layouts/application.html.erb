@@ -17,13 +17,24 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "https://cdn.simplecss.org/simple.css" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="antialiased">
+    <nav class="bg-white p-4">
+      <div class="flex justify-start items-start">
+        <a href="/" class="text-black text-lg font-bold">Alan Maciel</a>
+      </div>
+      <div class="flex justify-end items-end gap-4">
+        <a href="/about" class="text-black text-lg font-bold">About</a>
+        <a href="/blog" class="text-black text-lg font-bold">Blog</a>
+        <a href="/projects" class="text-black text-lg font-bold">Projects</a>
+        <a href="/repositories" class="text-black text-lg font-bold">Repositories</a>
+        <a href="/cv" class="text-black text-lg font-bold">CV</a>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
