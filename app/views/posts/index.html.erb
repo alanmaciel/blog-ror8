@@ -2,15 +2,15 @@
 
 <% content_for :title, "Posts" %>
 
-<h1>Posts</h1>
+<h2 class="text-center text-2xl font-bold my-6 font-mono uppercase tracking-widest">Blog</h2>
+<!-- CARD CONTAINER -->
+<section class="w-11/12 mx-auto mb-10 flex gap-8 flex-wrap">
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+  </div>
+</section>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
+<p><%= link_to "New post", new_post_path %></p>
 
-<%= link_to "New post", new_post_path %>

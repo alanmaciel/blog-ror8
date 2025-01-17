@@ -22,19 +22,34 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="antialiased">
-    <nav class="bg-white p-4">
-      <div class="flex justify-start items-start">
-        <a href="/" class="text-black text-lg font-bold">Alan Maciel</a>
-      </div>
-      <div class="flex justify-end items-end gap-4">
-        <a href="/about" class="text-black text-lg font-bold">About</a>
-        <a href="/blog" class="text-black text-lg font-bold">Blog</a>
-        <a href="/projects" class="text-black text-lg font-bold">Projects</a>
-        <a href="/repositories" class="text-black text-lg font-bold">Repositories</a>
-        <a href="/cv" class="text-black text-lg font-bold">CV</a>
-      </div>
-    </nav>
-    <%= yield %>
+  <body class="antialiased flex flex-col min-h-screen">
+    <!-- HEADER CONTENT -->
+    <header class="border-gray-200 border">
+      <navbar class="bg-white text-black h-14 px-4 pt-4 text-center sm:flex sm:justify-between sm:w-8/12 sm:mx-auto">
+        <section class="ml-6 text-xl">
+          Alan Maciel
+        </section>
+        <nav class="flex text-sm gap-6 mr-4 pt-1">
+            <a href="#">about</a>
+            <a href="#">blog</a>
+            <a href="#">projects</a>
+            <a href="#">repositories</a>
+            <a href="#">cv</a>
+            <a href="#">teaching</a>
+            <a href="#">people</a>
+        </nav>
+      </navbar>
+    </header>
+    <!-- HEADER CONTENT END -->
+    <main>
+        <%= yield %>
+    </main>
+    <!-- FOOTER CONTENT -->
+    <footer class="bg-neutral-900 text-white text-center mt-auto h-9 pt-1">
+      <section class="sm:w-96 sm:mx-auto">
+        <span class="text-xs">&copy; Copyright 2024 Alan Maciel.</span>
+      </section>
+    </footer>
+    <!-- FOOTER CONTENT END -->
   </body>
 </html>
