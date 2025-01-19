@@ -1,0 +1,29 @@
+<header class="h-14 fixed top-0 left-0 right-0 z-50 border-gray-200 border bg-white/90">
+  <navbar class="text-black text-center sm:flex sm:flex-row sm:justify-between sm:w-full md:justify-around xl:w-full xl:max-w-screen-xl xl:mx-auto">
+    <div class="flex justify-between items-center sm:items-baseline w-full sm:w-auto">
+      <section class="ml-6 pt-2 text-xl sm:pt-4 sm:ml-7 md:ml-10">
+        Alan Maciel
+      </section>
+      <!-- Hamburger Menu Button -->
+      <button class="block sm:hidden p-3" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); this.querySelector('.menu-icon').classList.toggle('hidden'); this.querySelector('.close-icon').classList.toggle('hidden')">
+        <svg class="w-7 h-7 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="w-7 h-7 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden flex text-right absolute left-0 w-full bg-white/90 border-b gap-2 border-gray-200 flex-col mb-8 mr-4 pt-1 bg-transparent text-sm sm:border-none sm:w-auto sm:static sm:flex-row sm:gap-4 sm:pt-4 sm:flex sm:text-base">
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">about</a>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">blog</a>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">projects</a>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">repositories</a>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">cv</a>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">teaching</a>
+      <a href="#" class="pt-2 pb-4 sm:py-1 px-6 sm:px-0">people</a>
+    </nav>
+  </navbar>
+</header>

@@ -13,5 +13,5 @@
   </div>
 </section>
 
-<p><%= link_to "New post", new_post_path %></p>
+<p><%= link_to "New post", new_post_path, if: authenticated? %></p>
 
