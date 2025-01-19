@@ -1,6 +1,11 @@
 
-<footer class="fixed bottom-0 left-0 right-0 bg-neutral-900 text-white text-center h-9 pt-1">
-  <section class="sm:w-96 sm:mx-auto">
-    <span class="text-xs">&copy; Copyright 2024 Alan Maciel.</span>
+<footer class="flex fixed bottom-0 left-0 right-0 bg-neutral-900  h-9 pt-1">
+  <section class="sm:w-96 mx-auto flex justify-between items-center">
+    <span class="text-xs text-center flex-1 text-white">
+      &copy; Copyright 2024 Alan Maciel. 
+    </span>
+    <span class="text-xs text-neutral-500 flex-1 absolute right-2">
+      <% if authenticated? %><%= link_to "π", "#", data: { controller: "shift-click", action: "click->shift-click#handleClick" } %><% end %>
+    </span>
   </section>
 </footer>
