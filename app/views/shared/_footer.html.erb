@@ -4,8 +4,8 @@
     <span class="text-xs text-center flex-1 text-white">
       &copy; Copyright 2024 Alan Maciel. 
     </span>
-    <span class="text-xs text-neutral-500 flex-1 absolute right-2">
-      <% if authenticated? %><%= link_to "π", "#", data: { controller: "shift-click", action: "click->shift-click#handleClick" } %><% end %>
+    <span class="text-xs text-neutral-700 absolute right-2">
+      <% unless authenticated? %><%= link_to "π", new_session_path, data: { turbo: false }, onclick: "if(event.metaKey) window.open(this.href)" %><% end %>
     </span>
   </section>
 </footer>
