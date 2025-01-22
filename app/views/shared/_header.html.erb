@@ -23,7 +23,7 @@
       <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">repositories</a>
       <%#= link_to "login", new_session_path, class: "py-2 sm:py-1 px-6 sm:px-0" unless authenticated? %>
       <%= button_to "log out", session_path, method: :delete, class: "py-2 sm:py-1 px-6 sm:px-0" if authenticated? %>
-      <%= link_to "new post", new_post_path, class:"px-4 mb-2 sm:mb-0 sm:px-2 py-1 border border-gray-200 rounded-lg sm:hover:bg-sky-500 sm:hover:text-white sm:transition sm:duration-200 sm:ease-in-out sm:focus:outline-none" if authenticated? %>
+      <%= link_to "new post", new_post_path, class: "px-4 mb-4 sm:mb-0 sm:px-2 py-1 border border-gray-200 rounded-lg sm:hover:bg-sky-500 sm:hover:text-white sm:transition sm:duration-200 sm:ease-in-out sm:focus:outline-none" if authenticated? %>
     </nav>
   </navbar>
 </header>
