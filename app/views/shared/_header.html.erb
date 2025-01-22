@@ -1,7 +1,7 @@
 <header class="h-14 fixed top-0 left-0 right-0 z-50 border-gray-200 border bg-white/90">
-  <navbar class="text-black text-center sm:flex sm:flex-row sm:justify-between sm:w-full md:justify-around xl:w-full xl:max-w-screen-xl xl:mx-auto">
-    <div class="flex justify-between items-center sm:items-baseline w-full sm:w-auto">
-      <section class="ml-6 pt-2 text-xl sm:pt-4 sm:ml-7 md:ml-10">
+  <navbar class="text-black sm:flex sm:flex-row sm:justify-between sm:w-full md:px-0 mx-auto md:max-w-screen-md">
+    <div class="flex justify-between sm:items-baseline w-full sm:w-auto">
+      <section class="ml-4 md:ml-0 text-xl pt-4">
         <%= link_to "Alan Maciel", root_path %>
       </section>
       <!-- Hamburger Menu Button -->
@@ -16,14 +16,14 @@
     </div>
 
     <!-- Mobile Menu -->
-    <nav id="mobile-menu" class="hidden flex text-right absolute left-0 w-full bg-white/90 border-b gap-2 border-gray-200 flex-col mb-8 mr-4 pt-1 bg-transparent text-sm sm:border-none sm:w-auto sm:static sm:flex-row sm:gap-4 sm:pt-4 sm:flex sm:text-base">
+    <nav id="mobile-menu" class="hidden flex text-right absolute left-0 w-full bg-white/90 border-b gap-2 border-gray-200 flex-col mb-8 mr-4 md:mr-0 pt-1 bg-transparent text-sm sm:border-none sm:w-auto sm:static sm:flex-row sm:gap-4 sm:pt-4 sm:flex sm:text-base">
       <%= link_to "posts", posts_path, class: "py-2 sm:py-1 px-6 sm:px-0" %>
       <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">about</a>
       <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">projects</a>
       <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">repositories</a>
       <%#= link_to "login", new_session_path, class: "py-2 sm:py-1 px-6 sm:px-0" unless authenticated? %>
       <%= button_to "log out", session_path, method: :delete, class: "py-2 sm:py-1 px-6 sm:px-0" if authenticated? %>
-      <%= link_to "new post", new_post_path, class:"px-2 py-1 border border-gray-200 rounded-lg hover:bg-sky-500 hover:text-white transition duration-200 ease-in-out focus:outline-none" if authenticated? %>
+      <%= link_to "new post", new_post_path, class:"px-4 mb-2 sm:mb-0 sm:px-2 py-1 border border-gray-200 rounded-lg sm:hover:bg-sky-500 sm:hover:text-white sm:transition sm:duration-200 sm:ease-in-out sm:focus:outline-none" if authenticated? %>
     </nav>
   </navbar>
 </header>
