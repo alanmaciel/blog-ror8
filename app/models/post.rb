@@ -2,6 +2,5 @@ class Post < ApplicationRecord
   has_rich_text :body
   has_many :comments
 
-  validates :title, presence: true
-  validates :body, presence: true
+  validates :title, :body, presence: true
 end
