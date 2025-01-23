@@ -1,7 +1,11 @@
 <h2 class="text-left text-2xl font-bold my-4">Comments</h2>
 
 <div id="comments">
-  <%= render post.comments %>
+  <% if post.comments.any? %>
+    <%= render post.comments %>
+  <% else %>
+    <p class="text-gray-500 italic mb-4">No comments yet. Be the first to comment!</p>
+  <% end %>
 </div>
 
 <%= render "comments/new", post: post %>
