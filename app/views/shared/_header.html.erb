@@ -1,0 +1,29 @@
+<header class="h-14 fixed top-0 left-0 right-0 z-50 border-gray-200 border bg-white/90">
+  <navbar class="text-black sm:flex sm:flex-row sm:justify-between sm:w-full md:px-0 mx-auto md:max-w-screen-md">
+    <div class="flex justify-between sm:items-baseline w-full sm:w-auto">
+      <section class="ml-4 md:ml-0 text-xl pt-4">
+        <%= link_to "Alan Maciel", root_path %>
+      </section>
+      <!-- Hamburger Menu Button -->
+      <button class="block sm:hidden p-3" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); this.querySelector('.menu-icon').classList.toggle('hidden'); this.querySelector('.close-icon').classList.toggle('hidden')">
+        <svg class="w-7 h-7 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="w-7 h-7 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden flex text-right absolute left-0 w-full bg-white/90 border-b gap-2 border-gray-200 flex-col mb-8 mr-4 md:mr-0 pt-1 bg-transparent text-sm sm:border-none sm:w-auto sm:static sm:flex-row sm:gap-4 sm:pt-4 sm:flex sm:text-base">
+      <%= link_to "posts", posts_path, class: "py-2 sm:py-1 px-6 sm:px-0" %>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">about</a>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">projects</a>
+      <a href="#" class="py-2 sm:py-1 px-6 sm:px-0">repositories</a>
+      <%#= link_to "login", new_session_path, class: "py-2 sm:py-1 px-6 sm:px-0" unless authenticated? %>
+      <%= button_to "log out", session_path, method: :delete, class: "py-2 sm:py-1 px-6 sm:px-0" if authenticated? %>
+      <%= link_to "new post", new_post_path, class: "px-4 mb-4 sm:mb-0 sm:px-2 py-1 border border-gray-200 rounded-lg sm:hover:bg-sky-500 sm:hover:text-white sm:transition sm:duration-200 sm:ease-in-out sm:focus:outline-none" if authenticated? %>
+    </nav>
+  </navbar>
+</header>
