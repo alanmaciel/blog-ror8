@@ -17,13 +17,20 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "https://cdn.simplecss.org/simple.css" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="antialiased flex flex-col min-h-screen bg-slate-100">
+    <!-- HEADER CONTENT -->
+    <%= render 'shared/header' %>
+    <!-- HEADER CONTENT END -->
+    <main class="my-20 w-screen px-4 md:px-0 mx-auto md:max-w-screen-md ">
+      <%= yield %>
+    </main>
+    <!-- FOOTER CONTENT -->
+    <%= render 'shared/footer' %>
+    <!-- FOOTER CONTENT END -->
   </body>
 </html>

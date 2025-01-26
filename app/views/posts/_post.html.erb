@@ -1,13 +1,21 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= post.body %>
-  </p>
-
-  <p><strong>Updated at:</strong><%= time_tag post.updated_at, "data-local": "time", "data-format": "%B %e, %Y %l:%M%P" %></p>
+ <!-- CARD -->
+<div id="<%= dom_id post %>" class="w-full mb-4">
+  <section class="mx-auto rounded-lg shadow-md hover:shadow-lg w-full border border-slate-200 bg-white">
+    <!-- CARD CONTENT -->
+    <section class="p-4 flex flex-col gap-2">
+      <!-- CARD BODY -->
+      <section>
+        <h2 class="font-medium text-xl leading-snug mb-2 text-slate-600 cursor-pointer hover:underline"><%= link_to post.title, post %></h2>
+        <p class="line-clamp-3 text-sm">
+          <%= time_ago_in_words(post.updated_at) %> ago
+        </p>
+        <p class="text-right">
+          <%= link_to "edit", edit_post_path(post), class: "px-2 py-1 border border-gray-400 rounded-lg hover:bg-blue-500 hover:text-white transition duration-200 ease-in-out focus:outline-none" if authenticated? %>
+        </p>
+      </section>
+      <!-- CARD BODY END -->
+    </section>
+    <!-- CARD CONTENT END -->
+  </section>
 </div>
+<!-- CARD END -->
