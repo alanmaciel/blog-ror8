@@ -2,15 +2,24 @@
 
 <% content_for :title, "Posts" %>
 
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+<h2 class="text-center text-7xl mt-8 mb-4 text-sky-500">The void</h2>
+<p class="text-center text-2xl mb-8">Notes from the void</p>
+<hr>
+<section class="w-full mb-10">
+  <div id="posts">
+    <% if @posts.any? %>
+      <% @posts.each do |post| %>
+        <%= render post %>
+      <% end %>
+    <% else %>
+      <div class="text-center text-gray-500 text-lg my-8">No posts yet. Check back later!
+      </div>
+      <p class="text-center text-gray-500 my-4">
+        <%= link_to "Create a new post", new_post_path, class:"px-4 py-2 border border-gray-200 rounded-lg hover:bg-sky-500 hover:text-white transition duration-200 ease-in-out focus:outline-none" if authenticated? %>
+      </p>
+    <% end %>
+  </div>
+</section>
+<div class="mt-4 flex justify-center">
+  <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 </div>
-
-<%= link_to "New post", new_post_path %>
