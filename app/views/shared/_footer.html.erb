@@ -1,0 +1,11 @@
+
+<footer class="flex fixed bottom-0 left-0 right-0 bg-neutral-900  h-9 pt-1">
+  <section class="sm:w-96 mx-auto flex justify-between items-center">
+    <span class="text-xs text-center flex-1 text-white">
+      &copy; Copyright 2024 Alan Maciel. 
+    </span>
+    <span class="text-xs text-neutral-700 absolute right-2">
+      <% unless authenticated? %><%= link_to "π", new_session_path, data: { turbo: false }, onclick: "if(event.metaKey) window.open(this.href)" %><% end %>
+    </span>
+  </section>
+</footer>
